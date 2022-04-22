@@ -1,3 +1,5 @@
+import Main from 'components/Main'
+
 export default function Home() {
-  return <h1>Space Tourism</h1>
+  return <Main />
 }
