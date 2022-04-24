@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
     max-width: ${theme.grid.container};
@@ -10,3 +10,5 @@ export const Container = styled.div`
     padding-right: 1.5rem;
   `}
 `
+
+export default Container

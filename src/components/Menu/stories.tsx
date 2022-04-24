@@ -13,3 +13,10 @@ export default {
 } as Meta
 
 export const Default: Story = () => <Menu />
+
+export const Mobile: Story = () => <Menu />
+Mobile.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1'
+  }
+}

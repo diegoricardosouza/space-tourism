@@ -1,10 +1,23 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import * as S from './styles'
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <S.Wrapper>
-      <ul>
+      <S.IconWrapper
+        aria-label="Abrir Menu"
+        onClick={() => setIsOpen((prevState) => (prevState ? false : true))}
+        isOpen={isOpen}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </S.IconWrapper>
+
+      <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <li>
           <Link href="/">
             <a>
@@ -14,7 +27,7 @@ const Menu = () => {
         </li>
 
         <li>
-          <Link href="/">
+          <Link href="/destination">
             <a>
               <span>01</span> Destination
             </a>
@@ -22,7 +35,7 @@ const Menu = () => {
         </li>
 
         <li>
-          <Link href="/">
+          <Link href="/crew">
             <a>
               <span>02</span> Crew
             </a>
@@ -30,13 +43,13 @@ const Menu = () => {
         </li>
 
         <li>
-          <Link href="/">
+          <Link href="/tecnology">
             <a>
               <span>03</span> Technology
             </a>
           </Link>
         </li>
-      </ul>
+      </S.MenuFull>
     </S.Wrapper>
   )
 }

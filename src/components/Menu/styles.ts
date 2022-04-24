@@ -1,13 +1,20 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.nav`
-  ${({ theme }) => css`
-    ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+  position: relative;
+`
+
+type MenuFullProps = {
+  isOpen: boolean
+}
+
+export const MenuFull = styled.ul<MenuFullProps>`
+  ${({ theme, isOpen }) => css`
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.2s ease-in;
 
     li {
       margin-right: 5rem;
@@ -31,6 +38,7 @@ export const Wrapper = styled.nav`
         span {
           font-weight: ${theme.font.bold};
           margin-right: 1.2rem;
+          width: 1.8rem;
         }
 
         &::after {
@@ -42,14 +50,90 @@ export const Wrapper = styled.nav`
           left: 0;
           bottom: 0;
           transition: all 0.2s ease-in;
-          opacity: 0;
           transform: scale(0);
         }
 
         &:hover::after {
-          opacity: 1;
           transform: scale(1);
         }
+      }
+    }
+
+    @media (max-width: 767px) {
+      opacity: ${isOpen ? '1' : '0'};
+      pointer-events: ${isOpen ? 'all' : 'none'};
+      height: 100vh;
+      position: fixed;
+      overflow: hidden;
+      flex-direction: column;
+      top: 0;
+      right: ${isOpen ? '0' : '-100%'};
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(81.5485px);
+      width: 25.4rem;
+      padding-left: 3.2rem;
+      padding-top: 11.8rem;
+
+      li {
+        margin-bottom: 3.2rem;
+
+        a {
+          height: auto;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
   `}
+`
+
+export const IconWrapper = styled.div<MenuFullProps>`
+  @media (max-width: 767px) {
+    ${({ theme, isOpen }) => css`
+      display: block;
+      position: absolute;
+      top: 3.2rem;
+      right: 2.7rem;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 2;
+      width: 2.4rem;
+      height: 2.1rem;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 0.3rem;
+        background: ${theme.colors.secondary};
+        margin-bottom: 0.6rem;
+        transition: all 0.2s ease-in;
+
+        &:nth-child(1) {
+          position: absolute;
+          transform: ${isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+          top: ${isOpen ? '0.8rem' : '0.1rem'};
+        }
+
+        &:nth-child(2) {
+          top: 1rem;
+          position: absolute;
+          opacity: ${isOpen ? '0' : '1'};
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          position: absolute;
+          transform: ${isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+          top: ${isOpen ? '0.8rem' : '1.9rem'};
+        }
+      }
+    `}
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
