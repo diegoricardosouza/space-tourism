@@ -12,11 +12,13 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
+      overflow-x: hidden;
     }
 
     body {
       font-family: ${theme.font.family.bellefair};
       font-size: ${theme.font.sizes.xsmall};
+      overflow-x: hidden;
     }
   `}
 `
