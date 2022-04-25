@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.nav`
   position: relative;
+  z-index: 1;
 `
 
 type MenuFullProps = {
@@ -75,13 +76,19 @@ export const MenuFull = styled.ul<MenuFullProps>`
       padding-top: 11.8rem;
 
       li {
+        margin-right: 0;
         margin-bottom: 3.2rem;
 
         a {
-          height: auto;
+          height: 3.1rem;
 
           &::after {
-            display: none;
+            width: 0.4rem;
+            height: 100%;
+            left: auto;
+            right: 0;
+            top: 0;
+            bottom: auto;
           }
         }
       }
