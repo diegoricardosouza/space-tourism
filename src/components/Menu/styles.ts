@@ -23,6 +23,14 @@ export const MenuFull = styled.ul<MenuFullProps>`
         margin-right: 0;
       }
 
+      @media (min-width: 768px) and (max-width: 991px) {
+        margin-right: 3.8rem;
+
+        &:last-child {
+          margin-right: 2.8rem;
+        }
+      }
+
       a {
         display: flex;
         text-decoration: none;
@@ -40,6 +48,10 @@ export const MenuFull = styled.ul<MenuFullProps>`
           font-weight: ${theme.font.bold};
           margin-right: 1.2rem;
           width: 1.8rem;
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            display: none;
+          }
         }
 
         &::after {
@@ -56,6 +68,10 @@ export const MenuFull = styled.ul<MenuFullProps>`
 
         &:hover::after {
           transform: scale(1);
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          font-size: ${theme.font.sizes.xsmall};
         }
       }
     }
