@@ -4,7 +4,11 @@ import * as S from './styles'
 
 const Home = () => {
   return (
-    <Base>
+    <Base
+      image="/img/bg-home.jpg"
+      imageTable="/img/bg-tablet.jpg"
+      imageMobile="/img/bg-mobile.jpg"
+    >
       <S.Wrapper>
         <Container>Home</Container>
       </S.Wrapper>
