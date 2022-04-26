@@ -35,6 +35,17 @@ export const Wrapper = styled.div`
       &:hover::after {
         transform: scale(1.64);
       }
+
+      @media (max-width: 767px) {
+        width: 15rem;
+        height: 15rem;
+        font-size: 2rem;
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 24.2rem;
+        height: 24.2rem;
+      }
     }
   `}
 `
