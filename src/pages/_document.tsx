@@ -1,14 +1,17 @@
 import Document, {
+  DocumentContext,
   Html,
   Head,
   Main,
-  NextScript,
-  DocumentContext
+  NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { RenderPageResult } from 'next/dist/shared/lib/utils'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<RenderPageResult> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -28,13 +31,13 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         )
-      }
+      } as RenderPageResult
     } finally {
       sheet.seal()
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="pt-BR">
         <Head />
