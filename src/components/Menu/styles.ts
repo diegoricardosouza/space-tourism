@@ -70,6 +70,10 @@ export const MenuFull = styled.ul<MenuFullProps>`
           transform: scale(1);
         }
 
+        &.active::after {
+          transform: scale(1);
+        }
+
         @media (min-width: 768px) and (max-width: 991px) {
           font-size: ${theme.font.sizes.xsmall};
         }
