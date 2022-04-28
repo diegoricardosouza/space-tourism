@@ -2,14 +2,36 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.footer`
   display: flex;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    justify-content: center;
+  }
 `
 
 export const DistanceWrapper = styled.div`
   width: 22.1rem;
   padding-right: 1.5rem;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
 `
 
-export const TimeWrapper = styled.div``
+export const TimeWrapper = styled.div`
+  @media (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
+`
 
 export const Title = styled.span`
   ${({ theme }) => css`

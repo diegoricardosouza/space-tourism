@@ -5,7 +5,8 @@ export default {
   colors: {
     primary: '#0B0D17',
     secondary: '#D0D6F9',
-    white: '#FFF'
+    white: '#FFF',
+    blueLight: '#383B4B'
   },
   font: {
     family: {

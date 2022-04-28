@@ -8,9 +8,11 @@ type BaseProps = {
 
 export const Wrapper = styled.div<BaseProps>`
   ${({ theme, bgImage, bgImageTablet, bgImageMobile }) => css`
-    background: url(${bgImage}) no-repeat center center ${theme.colors.primary};
+    background: url(${bgImage}) no-repeat center center fixed
+      ${theme.colors.primary};
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
 
     @media (max-width: 767px) {
       background: url(${bgImageMobile}) no-repeat center center

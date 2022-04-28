@@ -17,6 +17,7 @@ export const WrapperNumber = styled.h1`
       font-size: ${theme.font.sizes.small};
       line-height: 1.9rem;
       letter-spacing: 0.27rem;
+      justify-content: center;
     }
 
     @media (min-width: 768px) and (max-width: 991px) {
