@@ -85,8 +85,7 @@ export const MenuFull = styled.ul<MenuFullProps>`
       flex-direction: column;
       top: 0;
       right: ${isOpen ? '0' : '-100%'};
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(81.5485px);
+      background: rgba(11, 13, 23, 0.95);
       width: 25.4rem;
       padding-left: 3.2rem;
       padding-top: 11.8rem;
