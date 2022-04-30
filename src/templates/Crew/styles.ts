@@ -13,7 +13,7 @@ export const WrapperSlider = styled.div`
 
     .swiper {
       width: 100%;
-      height: calc(100vh - 220px);
+      height: calc(100vh - 22rem);
 
       @media (max-width: 767px) {
         height: auto;
@@ -26,6 +26,10 @@ export const WrapperSlider = styled.div`
       @media (min-width: 768px) and (max-width: 991px) {
         height: auto;
       }
+
+      @media (min-width: 991px) and (max-width: 1199px) {
+        height: calc(100vh - 33.8rem);
+      }
     }
 
     .swiper-pagination {
@@ -34,7 +38,7 @@ export const WrapperSlider = styled.div`
 
       @media (max-width: 767px) {
         text-align: center;
-        bottom: 20rem;
+        bottom: 25rem;
       }
 
       @media (min-width: 768px) and (max-width: 991px) {

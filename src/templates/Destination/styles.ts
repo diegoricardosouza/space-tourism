@@ -93,7 +93,7 @@ const StyledList = styled(TabsPrimitive.List)`
 const StyledTrigger = styled(TabsPrimitive.Trigger)`
   ${({ theme }) => css`
     border: 0;
-    font-family: ${theme.font.family.barlow};
+    font-family: ${theme.font.family.barlowCondensed};
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.normal};
     text-transform: uppercase;

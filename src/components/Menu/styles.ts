@@ -35,7 +35,7 @@ export const MenuFull = styled.ul<MenuFullProps>`
         display: flex;
         text-decoration: none;
         color: ${theme.colors.white};
-        font-family: ${theme.font.family.barlow};
+        font-family: ${theme.font.family.barlowCondensed};
         font-size: ${theme.font.sizes.small};
         align-items: center;
         line-height: 1.9rem;

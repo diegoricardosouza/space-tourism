@@ -6,7 +6,7 @@ export const WrapperNumber = styled.h1`
   ${({ theme }) => css`
     display: flex;
     color: ${theme.colors.white};
-    font-family: ${theme.font.family.barlow};
+    font-family: ${theme.font.family.barlowCondensed};
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.normal};
     line-height: 3.4rem;

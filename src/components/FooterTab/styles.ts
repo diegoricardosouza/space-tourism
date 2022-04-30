@@ -37,7 +37,7 @@ export const Title = styled.span`
   ${({ theme }) => css`
     display: block;
     color: ${theme.colors.secondary};
-    font-family: ${theme.font.family.barlow};
+    font-family: ${theme.font.family.barlowCondensed};
     font-size: ${theme.font.sizes.xsmall};
     line-height: 1.7rem;
     text-transform: uppercase;
