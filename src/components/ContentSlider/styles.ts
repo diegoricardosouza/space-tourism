@@ -81,6 +81,7 @@ export const Content = styled.p`
       text-align: center;
       max-width: 59rem;
       margin: 0 auto;
+      min-height: 8.4rem;
     }
   `}
 `
