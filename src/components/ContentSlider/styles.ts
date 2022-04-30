@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  @media (max-width: 767px) {
+    order: 2;
+  }
+`
 
 export const WrapperTitle = styled.header``
 

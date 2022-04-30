@@ -12,6 +12,8 @@ const ImageSlider = ({ img, name, width, height }: ImageSliderProps) => {
   return (
     <S.Wrapper>
       <Image src={img} alt={name} title={name} width={width} height={height} />
+
+      <S.Line />
     </S.Wrapper>
   )
 }

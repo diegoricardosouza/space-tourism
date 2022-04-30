@@ -4,6 +4,8 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.header`
   width: 100%;
   padding-top: 4rem;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 767px) {
     padding-top: 2.4rem;

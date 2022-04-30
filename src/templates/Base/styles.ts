@@ -12,7 +12,7 @@ export const Wrapper = styled.div<BaseProps>`
       ${theme.colors.primary};
     width: 100%;
     min-height: 100vh;
-    background-size: cover;
+    background-size: cover !important;
 
     @media (max-width: 767px) {
       background: url(${bgImageMobile}) no-repeat center center
