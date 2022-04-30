@@ -41,6 +41,21 @@ export const WrapperSlider = styled.div`
         bottom: 25rem;
       }
 
+      @media (min-width: 372px) and (max-width: 440px) {
+        text-align: center;
+        bottom: 23rem;
+      }
+
+      @media (min-width: 441px) and (max-width: 579px) {
+        text-align: center;
+        bottom: 20rem;
+      }
+
+      @media (min-width: 580px) and (max-width: 767px) {
+        text-align: center;
+        bottom: 18rem;
+      }
+
       @media (min-width: 768px) and (max-width: 991px) {
         text-align: center;
         bottom: 57rem;
