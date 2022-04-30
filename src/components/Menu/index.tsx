@@ -45,8 +45,8 @@ const Menu = () => {
         </li>
 
         <li>
-          <Link href="/tecnology">
-            <a className={router.pathname == '/tecnology' ? 'active' : ''}>
+          <Link href="/technology">
+            <a className={router.pathname == '/technology' ? 'active' : ''}>
               <span>03</span> Technology
             </a>
           </Link>
