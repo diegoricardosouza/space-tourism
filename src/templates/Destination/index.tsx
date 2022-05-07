@@ -1,16 +1,23 @@
-import * as S from './styles'
+import Head from 'next/head'
+import * as Tabs from '@radix-ui/react-tabs'
+
 import Base from 'templates/Base'
 import Container from 'components/Container'
 import Breadcrumb from 'components/Breadcrumb'
-import * as Tabs from '@radix-ui/react-tabs'
 import Moon from 'components/Moon'
 import TabContent from 'components/TabContent'
 import FooterTab from 'components/FooterTab'
 import mock from './mock'
 
+import * as S from './styles'
+
 const Destination = () => {
   return (
     <S.WrapperBase>
+      <Head>
+        <title>Destination | Space Tourism</title>
+      </Head>
+
       <Base
         image="/img/bg-destination.jpg"
         imageTable="/img/bg-destination.jpg"

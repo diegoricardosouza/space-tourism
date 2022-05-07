@@ -1,7 +1,8 @@
+import Base from 'templates/Base'
 import BtnExplore from 'components/BtnExplore'
 import Container from 'components/Container'
 import HomeContent from 'components/HomeContent'
-import Base from 'templates/Base'
+
 import * as S from './styles'
 
 const Home = () => {

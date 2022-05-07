@@ -1,16 +1,18 @@
+import Head from 'next/head'
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
 
+import Base from 'templates/Base'
 import Breadcrumb from 'components/Breadcrumb'
 import Container from 'components/Container'
-import Base from 'templates/Base'
-import * as S from './styles'
-
-import 'swiper/css'
-import 'swiper/css/pagination'
 import ContentTech from 'components/ContentTech'
-import Image from 'next/image'
+
 import mock from './mock'
+
+import 'swiper/css/pagination'
+import 'swiper/css'
+import * as S from './styles'
 
 const Technology = () => {
   const pagination = {
@@ -21,56 +23,62 @@ const Technology = () => {
   }
 
   return (
-    <Base
-      image="/img/bg-technology.jpg"
-      imageTable="/img/bg-technology.jpg"
-      imageMobile="/img/bg-technology.jpg"
-    >
-      <S.Wrapper>
-        <>
-          <S.WrapperContainer>
-            <Container>
-              <Breadcrumb number="03" title="SPACE LAUNCH 101" />
-            </Container>
+    <>
+      <Head>
+        <title>Technology | Space Tourism</title>
+      </Head>
 
-            <S.WrapperSlider>
-              <Swiper
-                direction={'vertical'}
-                pagination={pagination}
-                modules={[Pagination]}
-                className="mySwiper"
-              >
-                {mock.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <S.WrapperContentSlider>
-                      <S.WrapperContent>
-                        <ContentTech
-                          title={item.name}
-                          subtitle={item.subtitle}
-                          content={item.content}
-                        />
-                      </S.WrapperContent>
+      <Base
+        image="/img/bg-technology.jpg"
+        imageTable="/img/bg-technology.jpg"
+        imageMobile="/img/bg-technology.jpg"
+      >
+        <S.Wrapper>
+          <>
+            <S.WrapperContainer>
+              <Container>
+                <Breadcrumb number="03" title="SPACE LAUNCH 101" />
+              </Container>
 
-                      <S.WrapperImage>
-                        <Image
-                          src={item.img}
-                          alt={item.name}
-                          title={item.name}
-                          width={515}
-                          height={527}
-                          loading="lazy"
-                          objectFit="cover"
-                        />
-                      </S.WrapperImage>
-                    </S.WrapperContentSlider>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </S.WrapperSlider>
-          </S.WrapperContainer>
-        </>
-      </S.Wrapper>
-    </Base>
+              <S.WrapperSlider>
+                <Swiper
+                  direction={'vertical'}
+                  pagination={pagination}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  {mock.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <S.WrapperContentSlider>
+                        <S.WrapperContent>
+                          <ContentTech
+                            title={item.name}
+                            subtitle={item.subtitle}
+                            content={item.content}
+                          />
+                        </S.WrapperContent>
+
+                        <S.WrapperImage>
+                          <Image
+                            src={item.img}
+                            alt={item.name}
+                            title={item.name}
+                            width={515}
+                            height={527}
+                            loading="lazy"
+                            objectFit="cover"
+                          />
+                        </S.WrapperImage>
+                      </S.WrapperContentSlider>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </S.WrapperSlider>
+            </S.WrapperContainer>
+          </>
+        </S.Wrapper>
+      </Base>
+    </>
   )
 }
 
