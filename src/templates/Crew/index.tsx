@@ -7,7 +7,6 @@ import ContentSlider from 'components/ContentSlider'
 import Base from 'templates/Base'
 import * as S from './styles'
 
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 import ImageSlider from 'components/ImageSlider'
