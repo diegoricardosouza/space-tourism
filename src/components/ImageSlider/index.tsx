@@ -11,7 +11,14 @@ export type ImageSliderProps = {
 const ImageSlider = ({ img, name, width, height }: ImageSliderProps) => {
   return (
     <S.Wrapper>
-      <Image src={img} alt={name} title={name} width={width} height={height} />
+      <Image
+        src={img}
+        alt={name}
+        title={name}
+        width={width}
+        height={height}
+        loading="lazy"
+      />
 
       <S.Line />
     </S.Wrapper>

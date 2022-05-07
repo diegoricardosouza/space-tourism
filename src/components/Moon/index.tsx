@@ -9,7 +9,14 @@ export type MoonProps = {
 const Moon = ({ img, name }: MoonProps) => {
   return (
     <S.Wrapper>
-      <Image src={img} alt={name} width={445} height={445} quality="100" />
+      <Image
+        src={img}
+        alt={name}
+        width={445}
+        height={445}
+        quality="100"
+        loading="lazy"
+      />
     </S.Wrapper>
   )
 }
