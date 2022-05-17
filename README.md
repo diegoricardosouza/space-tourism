@@ -12,6 +12,8 @@ Dependências usadas no projeto:
 -  [Styled Components](https://styled-components.com/)
 -  [TypeScript](https://www.typescriptlang.org/)
 -  [Storybook](https://storybook.js.org/)
+-  [Swiper](https://swiperjs.com/)
+-  [Radix UI](https://www.radix-ui.com/)
 
 Também foi adicionado as ferramentas [**ESLint**](https://eslint.org/) e [**Prettier**](https://prettier.io/) para aumentar a produtividade e auxiliar a manter um padrão de código.
 
